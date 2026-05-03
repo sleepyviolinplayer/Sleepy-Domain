@@ -1,0 +1,36 @@
+<html>
+<head>
+<title>
+Sleepy Logins
+</title>
+<link rel="stylesheet" href="styles.css">
+<h1>Member/Trader Login</h1>
+</head>
+<body>
+<input type="text" id="username" placeholder="Username">
+<input type="password" id="password" placeholder="Password">
+<button onclick="login()">Login</button>
+
+<p id="message"></p>
+
+<script>
+function login() {
+  const user = document.getElementById("username").value;
+  const pass = document.getElementById("password").value;
+
+  if (user === "member" && pass === "virtuoso1134") {
+    window.location.href = "members.html";
+  } 
+  else if (user === "trader" && pass === "tradepostviolin") {
+    window.location.href = "traders.html";
+  } 
+  else {
+    document.getElementById("message").innerText = "Wrong login";
+  }
+}
+</script>
+<a href ="index.html">
+    Back to home?
+</a>
+</body>
+</html>
